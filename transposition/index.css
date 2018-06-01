@@ -14,7 +14,7 @@ body {
 
 .title {
 	position: relative;
-	opacity: 0;	
+	opacity: 0;
 	animation-name: fade-up;
 	animation-duration: 0.8s;
 	animation-delay: 0.5s;
@@ -30,6 +30,26 @@ body {
 @keyframes fade-out {
 	from {top: 0vh; opacity: 1;}
 	to {top: -3.5vh; opacity: 0;}
+}
+
+@keyframes fade-up-s {
+	from {top: 1vh; opacity: 0;}
+	to {top: 0vh; opacity: 1;}
+}
+
+@keyframes fade-out-s {
+	from {top: 0vh; opacity: 1;}
+	to {top: -1vh; opacity: 0;}
+}
+
+@keyframes flip-up {
+	from {transform: rotateX(10deg); opacity: 0;}
+	to {transform: rotateX(0deg); opacity: 1;}
+}
+
+@keyframes flip-out {
+	from {transform: rotateX(0deg); opacity: 1;}
+	to {transform: rotateX(10deg); opacity: 0;}
 }
 
 .card {
@@ -82,11 +102,30 @@ body {
 	display: block;
 	font-size: 20pt;
 	text-align: center;
+	-webkit-perspective: 1000px; /* Safari 4-8 */
+	perspective: 1000px;
+}
+
+.video-frame iframe {
+	opacity: 0;
+	animation-name: none;
+	animation-duration: 0.4s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 .video-frame p {
 	margin-top: 30px;
 	margin-bottom: -80px;
+	
+	position: relative;
+	opacity: 0;
+	animation-name: none;
+	animation-duration: 0.8s;
+	animation-delay: 0.4s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 .gallery-img {

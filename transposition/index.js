@@ -9,6 +9,26 @@ window.onscroll = function() {
 		title.style.animationName = "fade-up";
 		title.style.opacity = 0;
 	}
+	var videoFrames = document.getElementsByTagName("p");
+	if (window.pageYOffset > window.innerHeight * 0.7 && window.pageYOffset < window.innerHeight * 1.3) {
+		document.getElementById("ytplayer1").style.animationName = "flip-up";
+		document.getElementById("ytplayer1").style.opacity = 0;
+		videoFrames[0].style.animationName = "fade-up-s";
+		videoFrames[0].style.opacity = 0;
+	} else {
+		document.getElementById("ytplayer1").style.animationName = "flip-out";
+		document.getElementById("ytplayer1").style.opacity = 1;
+		videoFrames[0].style.animationName = "fade-out-s";
+		videoFrames[0].style.opacity = 1;
+	}
+	var videoFrames = document.getElementsByTagName("p");
+	if (window.pageYOffset > window.innerHeight * 1.7 && window.pageYOffset < window.innerHeight * 2.3) {
+		document.getElementById("ytplayer2").style.animationName = "flip-up";
+		videoFrames[1].style.animationName = "fade-up-s";
+	} else {
+		document.getElementById("ytplayer2").style.animationName = "flip-out";
+		videoFrames[1].style.animationName = "fade-out-s";
+	}
 	var imgs = document.getElementsByClassName("card-image");
 	var titles = document.getElementsByClassName("image-title");
 	if (window.pageYOffset > window.innerHeight * 2.6) {
@@ -51,11 +71,9 @@ window.onscroll = function() {
 		}, 250);
 	}
 	if (Math.abs(window.pageYOffset - window.innerHeight) < (window.innerHeight/4) || Math.abs(window.pageYOffset - (window.innerHeight*2)) < (window.innerHeight/4)) {
-		console.log("match");
 		scrollPos = window.pageYOffset;
 		setTimeout(function() {
 			if (window.pageYOffset - scrollPos == 0) {
-				console.log("effect");
 				if (Math.abs(window.pageYOffset - window.innerHeight) < (window.innerHeight/4)) {
 					var scrolling = setInterval(function() {
 						window.scrollTo(window.pageXOffset, window.pageYOffset + ((window.innerHeight - window.pageYOffset) / 4));
