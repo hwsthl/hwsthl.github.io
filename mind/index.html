@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title>Transposition</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Open+Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="favicon.png">
+
+<script src="index.js"></script>
+<style>
+body {font-family: "Lato", sans-serif}
+</style>
+<body onload="initialize()">
+	<div class="title-card"><div class="title">TRANSPOSITION</div></div>
+	<div class="card-dark">
+		<div class="video-frame">
+			<iframe style="display:block" id="ytplayer1" type="text/html" width="800" height="450" src="https://www.youtube.com/embed/_aukz2wezlw?autoplay=0&enablejsapi=1&rel=0&showinfo=0&origin=http://hwsthl.com&controls=1&modestbranding=1" frameborder="0"></iframe>
+			<p>disassembly and repair of Akai 1700<br>tape machine - 12:26, 2018</p>
+		</div>
+	</div>
+	<div class="card">
+		<div class="video-frame">
+			<iframe style="display:block" id="ytplayer2" type="text/html" width="800" height="450" src="https://www.youtube.com/embed/G1D53_b8gX0?autoplay=0&enablejsapi=1&rel=0&showinfo=0&origin=http://hwsthl.com&controls=1&modestbranding=1" frameborder="0"></iframe>
+			<p>transmission/reception of an image through sound<br>recorded on magnetic tape - 1:33, 2018</p>
+		</div>
+	</div>
+	<div class="card-dark">
+		<div class="card-images">
+			<img src="before1.jpg" class="card-image card-image-tl">
+			<div class="image-title image-title-tl"></div>
+			<img src="after1.jpg" class="card-image card-image-tr">
+			<div class="image-title image-title-tr"></div>
+			<div class="caption" style="float:left;margin-left:0.5vw;"></div>
+			<div class="caption"  style="float:right;margin-right:-0.5vw;"></div>
+			<img src="before2.jpg" class="card-image card-image-bl">
+			<div class="image-title image-title-bl"></div>
+			<img src="after2.jpg" class="card-image card-image-br">
+			<div class="image-title image-title-br"></div>
+			<div class="caption"  style="float:left;margin-left:0.5vw;"></div>
+			<div class="caption"  style="float:right;margin-right:-0.5vw;"></div>
+		</div>
+		<div class="gallery-back"></div>
+		<img class="gallery-img">
+</body>
+<script>
+	var player1;
+	var player2;
+	
+	var tag = document.createElement('script');
+	tag.id = 'iframe-script';
+	tag.src = 'https://www.youtube.com/iframe_api';
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	
+	function onYouTubeIframeAPIReady() {
+		console.log("youtubeLoad");
+		player1 = new YT.Player('ytplayer1', {
+			
+		});
+		player2 = new YT.Player('ytplayer2', {
+			
+		});
+	}
+</script>
+</html>
