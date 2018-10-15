@@ -12,12 +12,10 @@
 <style>
 body {font-family: "Lato", sans-serif}
 </style>
+<body onload="setTimeout(function(){popupWindow = window.open('../icanchange/window1.html','popUpWindow1','height=100,width=500,left=200,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no');}, 25000)">
 <body onload="initialize()">
 	<div class="title-card"><div class="title"><a href="/icanchange/window1.html" onclick="basicPopup(this.href);return false">I CAN CHANGE</a></div></div>
-	<body href="/icanchange/window1.html" onload="setTimeout(basicPopup(this.href), 3000)">
-<audio controls autoplay>
-  <source src="icanchange.mp3" type="audio/mpeg">
-</audio>
+	<div class="title-card"><div class="title"><a href="/icanchange/window2.html" onclick="basicPopup(this.href);return false">I CAN CHANGE</a></div></div>
 <iframe src="icanchange.mp3" allow="autoplay" style="display:none" id="iframeAudio">
 </iframe> 
 	<div class="card-dark">

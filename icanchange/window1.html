@@ -1,5 +1,15 @@
 <!doctype html>
+<script language="javascript">
+var popupWindow = null;
+function positionedPopup(url,winName,w,h,t,l,scroll){
+settings =
+'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
 <html>
+<body onload="setTimeout(function(){popupWindow = window.open('../icanchange/window2.html','popUpWindow2','height=100,width=500,left=+600+,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no');}, 4000); setTimeout(close, 4010)">
+<body onload="initialize()">
 <head>
 <meta charset="utf-8">
 <title>window1</title>
