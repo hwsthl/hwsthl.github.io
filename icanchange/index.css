@@ -8,7 +8,6 @@ body {
 	line-height: 100vh;
 	letter-spacing: 17px;
 	height: 100vh;
-	background-color: #eee;
 	overflow: hidden;
 }
 
@@ -269,4 +268,16 @@ body {
 	margin-left: -40vw;
 	margin-top: 0vw;
 	right: -1vw;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+html { 
+  background: url(../icanchange/images/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!--<body background="../icanchange/images/bg.png">-->
 <title>icanchange</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,37 +8,60 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Open+Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" href="favicon.png">
+<link rel="stylesheet" type="text/css" href="inlineplayer.css" />
+<link rel="stylesheet" type="text/css" href="flashblock.css" />
 
 <script src="index.js"></script>
+<script src="soundmanager2.js"></script>
+<script type="text/javascript" src="inlineplayer.js"></script>
 <style>
 body {font-family: "Lato", sans-serif}
 </style>
-<body onload="setTimeout(function(){popupWindow = window.open('../icanchange/window1.html','popUpWindow1','height=100,width=550,left=200,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no');}, 25000)">
-<body onload="initialize()">
-	<div class="title-card"><div class="title"><a href="../icanchange/window1.html" onclick="basicPopup(this.href);return false">I CAN CHANGE</a></div></div>
-	<div class="title-card"><div class="title"><a href="../icanchange/window2.html" onclick="basicPopup(this.href);return false">I CAN CHANGE</a></div></div>
-<iframe src="icanchange.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-</iframe> 
-<script>
-	var player1;
-	var player2;
-	
-	var tag = document.createElement('script');
-	tag.id = 'iframe-script';
-	tag.src = 'https://www.youtube.com/iframe_api';
-	var firstScriptTag = document.getElementsByTagName('script')[0];
-	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	
-	function onYouTubeIframeAPIReady() {
-		console.log("youtubeLoad");
-		player1 = new YT.Player('ytplayer1', {
-			
-		});
-		player2 = new YT.Player('ytplayer2', {
-			
-		});
-	}
+<script language="javascript">
+var popupWindow = null;
+function positionedPopup(url,winName,w,h,t,l,scroll){
+settings =
+'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
 </script>
+<script language="javascript">
+var popupWindow = null;
+function centeredPopup(url,winName,w,h,scroll){
+LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+TopPosition = (screen.height) ? (screen.height-h)/2.3 : 0;
+settings =
+'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
+<script language="javascript">
+var popupWindow = null;
+function randomPopup(url,winName,w,h,scroll){
+LeftRandom = Math.floor(Math.random() * 1800)
+TopRandom = Math.floor(Math.random() * 1000)
+settings =
+'height='+h+',width='+w+',top='+TopRandom+',left='+LeftRandom+',scrollbars='+scroll+',resizable'
+popupWindow = window.open(url,winName,settings)
+}
+</script>
+<body onload="alertBox()">
+	  <!--"setTimeout(function(){popupWindow = window.open('../icanchange/window1.html','popUpWindow1','height=100,width=550,left=200,top=100,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no');}, 25000)">-->
+<body onload="initialize()">
+	<div class="title-card"><div class="title"><a href="icanchange.mp3" onclick="
+		setTimeout(function(){centeredPopup('../icanchange/lyrics.html','popUpWindow','610','600','no')}, 500); setTimeout(function(){positionedPopup('../icanchange/window1.html','popUpWindow1','400','335','30','400','no')}, 27000); 
+		setTimeout(function(){positionedPopup('../icanchange/window2.html','popUpWindow2','400','335','30','800','no')}, 27000); 
+		setTimeout(function(){positionedPopup('../icanchange/window3.html','popUpWindow3','400','335','395','400','no')}, 27000); 
+		setTimeout(function(){positionedPopup('../icanchange/window4.html','popUpWindow4','400','335','395','800','no')}, 27000); 
+		setTimeout(function(){positionedPopup('../icanchange/window5.html','popUpWindow5','800','800','100','500','no')}, 55400);
+		setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow6','300','100','no')}, 91700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow7','300','100','no')}, 92700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow8','300','100','no')}, 93700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow9','300','100','no')}, 94700);
+		setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow6','300','100','no')}, 96700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow7','300','100','no')}, 97700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow8','300','100','no')}, 98700); setTimeout(function(){randomPopup('../icanchange/window8.html','popUpWindow9','300','100','no')}, 99700);
+		setTimeout(function(){randomPopup('../icanchange/window7.html','popUpWindow10','600','200','no')}, 100700);">I CAN CHANGE</a></div></div>
+<!--	<div class="title-card"><div class="title"><a href="icanchange.mp3" onclick="setTimeout(function(){randomPopup('../icanchange/window6.html','popUpWindow10','400','335','no')}, 1000);">I CAN CHANGE</a></div></div>-->
+<!--<a href="http://www.freshly-ground.com/data/audio/binaural/Rain 3.mp3">Rain 3</a>-->
+<!--	<div class="title-card"><div class="title"><a href="../icanchange/window2.html" onclick="basicPopup(this.href);return false">I CAN CHANGE</a></div></div>-->
+<!--<iframe src="icanchange.mp3" allow="autoplay" style="display:none" id="iframeAudio">-->
+<!--</iframe> -->
 <style>
 		a.nounderline {text-decoration: none; }
 /* unvisited link */
